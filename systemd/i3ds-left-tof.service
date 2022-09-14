@@ -1,0 +1,8 @@
+[Unit]
+Description=I3DS node for left VZense ToF cameras
+Requires=i3ds-address-server.service
+After=i3ds-address-server.service
+
+[Service]
+ExecStart=i3ds_vzense_tof -C <CHECK THIS> -n 350
+Restart=on-failure

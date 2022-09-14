@@ -1,0 +1,10 @@
+[Unit]
+Description=I3DS address server
+Requires=network.target
+
+[Service]
+ExecStart=i3ds_adress_server -c /etc/i3ds_addresses.csv
+Restart=on-failure
+
+[Install]
+WantedBy=i3ds.target
