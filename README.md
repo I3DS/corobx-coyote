@@ -29,7 +29,7 @@ The serial numbers of the VZense cameras that should be passed to the i3ds-vzens
 
 # Using systemd units
 
-All i3ds services can be started and stopped with
+All I3DS services can be started and stopped with
 
     $ sudo systemctl start i3ds.target
     $ sudo systemctl stop i3ds.target
@@ -50,7 +50,7 @@ and reenabled with
 
     $ sudo systemctl enable i3ds.target
 
-to view any running i3ds processes, run
+to view any running I3DS processes, run
 
     $ pgrep -a i3ds
 
@@ -59,6 +59,10 @@ If changes are needed to service arguments, change the files in corobx-coyote/sy
     $ sudo systemctl daemon-reload
 
 Then restart the services.
+
+To see current status of all I3DS services, run
+
+    $ systemctl status "i3ds*"
 
 # Setting IP Address of address server
 
