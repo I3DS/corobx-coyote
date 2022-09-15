@@ -63,10 +63,10 @@ This can be done either per shell or in .bashrc or similar
 
 There are two address files provided with the repo, one called local\_addresses.csv, used for testing and one called i3ds\_addresses.csv with the IP of the Coyote OBC. The address server will always start reading from the symlink /etc/i3ds\_addresses.csv, so to switch between the settings, we can redefine the symlink like this from the corobx-coyote folder:
 
-    $ sudo ln -sf $(pwd)/i3ds_addresses.csv /etc/local_addresses.csv
+    $ sudo ln -sf $(pwd)/i3ds_addresses.csv /etc/i3ds\_addresses.csv
 
 to use the real IP and 
 
-    $ sudo ln -sf $(pwd)/local_addresses.csv /etc/local_addresses.csv
+    $ sudo ln -sf $(pwd)/local_addresses.csv /etc/i3ds\_addresses.csv
 
 to switch to the localhost addresses. By default, i3ds\_addresses.csv is installed by the script.
