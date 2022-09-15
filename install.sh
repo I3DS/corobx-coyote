@@ -6,8 +6,10 @@ if [[ $EUID != 0 ]]; then
     exit
 fi
 
+ROOT_DIR=$(pwd)
+
 # Put symlink to address file
-ln -s $ROOT_DIR/i3ds_adresses.csv /etc/i3ds_adresses.csv || echo "Created symlink to i3ds_adresses.csv from /etc/i3ds_adresses.csv"
+ln -s $ROOT_DIR/i3ds_addresses.csv /etc/i3ds_addresses.csv || echo "Created symlink to i3ds_adresses.csv from /etc/i3ds_adresses.csv"
 
 # Create symlinks to service files
 for file in systemd/*; do

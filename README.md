@@ -24,3 +24,25 @@ The serial numbers of the VZense cameras that should be passed to the i3ds-vzens
 5. Copied the udev rules file
     $ sudo cp i3ds-vzense-tof/thirdparty/Vzense_SDK_Linux/Ubuntu18.04/0660-vzense-usb.rules /etc/udev/rules/50-vzense-usb.rules
 6. Run `install.sh` script to make symlinks to address file and systemd services
+
+# Using systemd units
+
+All i3ds services can be started and stopped with
+
+    $ sudo systemctl start i3ds.target
+    $ sudo systemctl stop i3ds.target
+
+The following services can also be started and stopped individually
+    - i3ds-address-server.service
+    - i3ds-left-tof.service
+    - i3ds-right-tof.service
+
+The tof services will automatically start the address-server.
+
+# Setting IP Address of address server
+
+Any machine that should connect to the nodes running on the coyote OBC should set the following environment variable
+
+    $ export I3DS_ADDR_SRV_URL=10.250.247.50
+
+This can be done either per shell or in .bashrc or similar
