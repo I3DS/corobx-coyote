@@ -39,6 +39,18 @@ The following services can also be started and stopped individually
 
 The tof services will automatically start the address-server.
 
+The main target unit is set to automatically start on boot. This can be disabled with
+
+    $ sudo systemctl disable i3ds.target
+
+and reenabled with
+
+    $ sudo systemctl enable i3ds.target
+
+to view any running i3ds processes, run
+
+    $ pgrep -a i3ds
+
 # Setting IP Address of address server
 
 Any machine that should connect to the nodes running on the coyote OBC should set the following environment variable

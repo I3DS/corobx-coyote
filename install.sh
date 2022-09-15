@@ -15,3 +15,6 @@ ln -s $ROOT_DIR/i3ds_addresses.csv /etc/i3ds_addresses.csv || echo "Created syml
 for file in systemd/*; do
     ln -s $ROOT_DIR/$file /etc/systemd/system/ || echo "Created symlink to $FILE in /etc/systemd/system/"
 done
+
+systemctl daemon-reload
+systemctl enable i3ds.target
