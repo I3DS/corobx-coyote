@@ -1,0 +1,9 @@
+[Unit]
+Description=I3DS node for Wisdom GPR
+Requires=i3ds-address-server.service
+After=i3ds-address-server.service
+PartOf=i3ds.target
+
+[Service]
+ExecStart=i3ds_wisdom -n 352 -p 12345
+Restart=on-failure

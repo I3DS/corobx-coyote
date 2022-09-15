@@ -7,6 +7,8 @@ The sensor nodes running on the Coyote are:
 351: Right VZense ToF
 352: Wisdom GPR
 
+The Wisdom node is set to contact UDP port 12345.
+
 # VZense Serial numbers
 The serial numbers of the VZense cameras that should be passed to the i3ds-vzense-tof -c flag are:
 
@@ -52,6 +54,12 @@ to view any running i3ds processes, run
 
     $ pgrep -a i3ds
 
+If changes are needed to service arguments, change the files in corobx-coyote/systemd, and run
+
+    $ sudo systemctl daemon-reload
+
+Then restart the services.
+
 # Setting IP Address of address server
 
 Any machine that should connect to the nodes running on the coyote OBC should set the following environment variable
@@ -70,4 +78,4 @@ to use the real IP and
 
     $ sudo ln -sf $(pwd)/local_addresses.csv /etc/i3ds_addresses.csv
 
-to switch to the localhost addresses. By default, i3ds\_addresses.csv is installed by the script.
+to switch to the localhost addresses. Then restart all services. By default, i3ds\_addresses.csv is installed by the script.
