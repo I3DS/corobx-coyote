@@ -3,6 +3,6 @@ Description=Target unit for all I3DS services
 Wants=i3ds-address-server.service
 Wants=i3ds-left-tof.service
 Wants=i3ds-right-tof.service
-
+Wants=i3ds-wisdom.service
 [Install]
 WantedBy=multi-user.target
