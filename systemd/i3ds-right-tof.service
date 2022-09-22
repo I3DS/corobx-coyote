@@ -7,3 +7,6 @@ PartOf=i3ds.target
 [Service]
 ExecStart=i3ds_vzense_tof -c VD7101PJB7280800P -n 351
 Restart=on-failure
+
+[Install]
+WantedBy=i3ds.target
