@@ -1,0 +1,11 @@
+[Unit]
+Description=Wait for usb
+Before=i3ds-left-tof.service i3ds-right-tof.service i3ds-wisdom.service i3ds-address-server.service
+PartOf=i3ds.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/fredrikh/code/corobx-coyote/systemd/check_usb.sh
+
+[Install]
+WantedBy=i3ds.target
