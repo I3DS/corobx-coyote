@@ -3,18 +3,18 @@
 # Node IDs
 The sensor nodes running on the Coyote are:
 
-350: Left VZense ToF
-351: Right VZense ToF
-352: Wisdom GPR
+- 350: Left VZense ToF
+- 351: Right VZense ToF
+- 352: Wisdom GPR
 
 The Wisdom node is set to contact UDP port 12345.
 
 # VZense Serial numbers
 The serial numbers of the VZense cameras that should be passed to the i3ds-vzense-tof -c flag are:
 
-VD7101PJB7280788P: Left VZense ToF
-VD7101PJB7280800P: Right VZense ToF
-<CHECK THIS>: Test VZense ToF
+- VD7101PJB7280788P: Left VZense ToF
+- VD7101PJB7280800P: Right VZense ToF
+- <CHECK THIS>: Test VZense ToF
 
 # Location of check_usb.sh in i3ds-wait-for-usb.service
 Within i3ds-wait-for-usb.service, the location of the __check_usb.sh__ file needs to be changed to correspond to the computers path. It is by default set to the path on the sintef zintbook lab pc.
