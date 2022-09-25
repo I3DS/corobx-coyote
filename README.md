@@ -12,9 +12,12 @@ The Wisdom node is set to contact UDP port 12345.
 # VZense Serial numbers
 The serial numbers of the VZense cameras that should be passed to the i3ds-vzense-tof -c flag are:
 
-<CHECK THIS>: Left VZense ToF
-<CHECK THIS>: Right VZense ToF
+VD7101PJB7280788P: Left VZense ToF
+VD7101PJB7280800P: Right VZense ToF
 <CHECK THIS>: Test VZense ToF
+
+# Location of check_usb.sh in i3ds-wait-for-usb.service
+Within i3ds-wait-for-usb.service, the location of the __check_usb.sh__ file needs to be changed to correspond to the computers path. It is by default set to the path on the sintef zintbook lab pc.
 
 # Install actions
 
@@ -26,6 +29,7 @@ The serial numbers of the VZense cameras that should be passed to the i3ds-vzens
 5. Copied the udev rules file
     $ sudo cp i3ds-vzense-tof/thirdparty/Vzense_SDK_Linux/Ubuntu18.04/0660-vzense-usb.rules /etc/udev/rules/50-vzense-usb.rules
 6. Run `install.sh` script to make symlinks to address file and systemd services
+7. Change path in i3ds-wait-for-usb.service to correspond to the path on the computer you install on.
 
 # Using systemd units
 
