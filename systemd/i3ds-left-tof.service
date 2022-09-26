@@ -5,7 +5,7 @@ After=i3ds-address-server.service
 PartOf=i3ds.target
 
 [Service]
-ExecStart=i3ds_vzense_tof -c VD7101PJB7280788P -n 350
+ExecStart=i3ds_vzense_tof -c VD7101PJB7280788P -n 350 --filter-depth --filter-ir --filter-compute --filter-time -t 20
 Restart=on-failure
 
 [Install]

@@ -5,7 +5,7 @@ PartOf=i3ds.target
 
 [Service]
 Type=oneshot
-ExecStart=/home/fredrikh/code/corobx-coyote/systemd/check_usb.sh
+ExecStart=/home/coyote/sintef/corobx-coyote/systemd/check_usb.sh
 
 [Install]
 WantedBy=i3ds.target
