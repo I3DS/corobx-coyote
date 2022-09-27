@@ -4,7 +4,7 @@ Requires=i3ds-address-server.service
 PartOf=i3ds.target
 
 [Service]
-ExecStart=i3ds_vzense_tof -c VD7101PJB7280788P -n 350 --filter-depth --filter-ir --filter-compute --filter-time -t 15 -u 600 --gmm-gain 2000
+ExecStart=i3ds_vzense_tof -c VD7101PJB7280868P -n 350 --filter-depth --filter-ir --filter-compute --filter-time -t 15 -u 600 --gmm-gain 2000
 Restart=on-failure
 
 [Install]
