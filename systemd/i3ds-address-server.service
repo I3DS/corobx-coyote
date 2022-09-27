@@ -1,5 +1,6 @@
 [Unit]
 Description=I3DS address server
+Before=i3ds-left-tof.service i3ds-right-tof.service i3ds-wisdom.service
 Requires=network.target
 PartOf=i3ds.target
 
