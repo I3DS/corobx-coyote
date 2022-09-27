@@ -12,8 +12,8 @@ The Wisdom node is set to contact UDP port 12345.
 # VZense Serial numbers
 The serial numbers of the VZense cameras that should be passed to the i3ds-vzense-tof -c flag are:
 
-- VD7101PJB7280788P: Left VZense ToF
-- VD7101PJB7280800P: Right VZense ToF
+- VD7101PJB7280868P: Left VZense ToF (coyote)
+- VD7101PJB7280814P: Right VZense ToF (coyote)
 - <CHECK THIS>: Test VZense ToF
 
 # Location of check_usb.sh in i3ds-wait-for-usb.service
