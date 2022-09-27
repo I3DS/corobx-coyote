@@ -6,6 +6,7 @@ PartOf=i3ds.target
 [Service]
 ExecStart=i3ds_vzense_tof -c VD7101PJB7280868P -n 350 --filter-depth --filter-ir --filter-compute --filter-time -t 20 -u 600 --gmm-gain 2000
 Restart=on-failure
+RestartSec=3
 
 [Install]
 WantedBy=i3ds.target
